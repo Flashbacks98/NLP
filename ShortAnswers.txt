@@ -1,0 +1,50 @@
+Part 1.1:
+
+P(Sam | am) = (c(w) + 1) / (N + V)
+V = {<s>, </s>, I, am, Sam, do, not, like, green, eggs, and} => |V| = 11
+N = 3
+c(w) = 2
+P(Sam | am) = (2 + 1) / (3 + 11) = 3 / 14 
+
+Ans: 3/14
+
+Section 1.3
+
+Question 1:
+The total number of unique words in the training corpus after processing is 41738.
+
+Question 2:
+The total number of word tokens in the training corpus exclude <cs> is 2520268.
+
+Question 3:
+The percentage of word tokens and word types in the test corpus that did not occur in training before mapping 
+unknown words to <unk> is as follows:
+
+Token Percentage: 1.95%
+Type Percentage: 3.87%
+
+Question 4: 
+
+The percentage of Bigram Types and Bigram Tokens are:
+
+Bigram Token Percentage: 24.17%
+Bigram Type Percentage: 27.72%
+
+Question 5:
+
+-94.9393 Unigram 
+-38.8685 Bigram
+-55.7257 Add-One Smoothing
+
+Question 6:
+
+Perplexity:
+13278.8789 Unigram
+48.7571 Bigram
+263.1094 Add-One Smoothing
+
+Question 7:
+
+1.0112 Unigram
+1.0056 Bigram
+1.0 Add One Smoothing
