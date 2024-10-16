@@ -21,6 +21,13 @@ def count_words(inputFile):
                 unique_words[word.lower()] += 1
     return dict(unique_words)
 
+def count_total_words(inputFile):
+    total_words = 0
+    inputFile.seek(0)  # Ensure you start reading from the beginning of the file
+    for line in inputFile:
+        total_words += len(line.split())
+    return total_words
+
 def compare_to(dict1, dict2):
     return [element for element in dict1 if element not in dict2]
 
@@ -64,13 +71,18 @@ unk_sentences(trainFile, processedTrainFile, unique_words, [])
 processedTestFile = open("processedTest.txt", "r", errors="ignore")
 processedTrainFile = open("processedTrain.txt", "r", errors="ignore")
 
-# 1.3.2
+# 1.3.1
 processed_word_counts = count_words(processedTrainFile)
 print(processed_word_counts)
 
 total_unique_words = len(processed_word_counts)
 
 print(f"Total unique words: {total_unique_words}")
+
+# 1.3.2
+
+total_word_count = count_total_words(processedTrainFile)
+print("Total word count in training corpus:", total_word_count)
 
 testFile.close()
 trainFile.close()
